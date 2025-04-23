@@ -228,13 +228,7 @@ p {
     padding: 20px;
 }
 
-.A-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .B-list{
     list-style: none;
@@ -244,26 +238,7 @@ p {
     justify-content: space-between;
 }
 
-.first-list {
-    text-align: left;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 1.3;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #fffefe;
-    padding: 15px 25px;
-    background-color: #061C2C;
-    width: 27.9%;
-    min-height: 150px;
-    top: 50%;
-    left: 0%;
-    bottom: 0%;  /* Added minimum height */
-    /* display: flex;
-    align-items: last baseline;
-    justify-content: center;
-    box-sizing: border-box; */
-}
+
 
 .second-list{
     text-align: left;
@@ -289,11 +264,30 @@ p {
 .info-container{
     font-family: Arial, sans-serif;
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 20px;
 }
 
-
+.first-list {
+    text-align: left;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fffefe;
+    padding: 15px 25px;
+    background-color: #061C2C;
+    width: 27.9%;
+    min-height: 150px;
+    top: 50%;
+    left: 0%;
+    bottom: 0%;  /* Added minimum height */
+    /* display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    box-sizing: border-box; */
+}
 .first-list span {
     position: relative;
     display: inline-block;
@@ -301,7 +295,13 @@ p {
     bottom: 0%;
     left: 0%;
 }
-
+.A-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
 .first-list br {
     display: block;
     content: "";
@@ -314,7 +314,7 @@ p {
      align-items: center; /* Vertical alignment */
      justify-content: space-between; /* Puts max space between items */
      max-width: 1200px; /* Adjust as needed */
-     margin: 24px 0px;
+     margin: 0 auto;
      padding: 40px 20px;
  }
  
@@ -350,4 +350,19 @@ p {
     .image-content {
         width: 60%;
     }
+}
+
+.first-list::before {
+    content: ">";
+    color: blue;
+    font-family: 'Arial Black', sans-serif; /* Wider, bolder font */
+    font-size: 1.5em;
+    font-weight: 900;
+    letter-spacing: 1px; /* Adds slight extra width */
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.first-list:hover::before {
+    transform: scale(1.2); /* Slightly enlarges on hover */
 }
