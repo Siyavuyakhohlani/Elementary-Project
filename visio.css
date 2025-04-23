@@ -137,7 +137,7 @@
 .carousel-caption {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: absolute;
-    top: 50%;
+    top: 66%;
     left: 0;
     transform: translateY(-50%);
     background: rgb(21, 21, 165);
@@ -213,99 +213,12 @@ p {
     margin: 24px 0px;
  }
  
- .init-container {
-    font-family: Arial, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    
-}
-
-.final-container{
-    font-family: sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-
-
-.B-list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-.second-list{
-    text-align: left;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.3;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #fffefe;
-    padding: 15px 25px;
-    background-color: #244AC2;
-    width: 27.9%;
-}
-
-.second-list li{
-    position: relative;
-    display: inline-block;
-    text-align: left;
-    bottom: 0%;
-    left: 0%;
-}
 
 .info-container{
     font-family: Arial, sans-serif;
     max-width: 1200px;
     /* margin: 0 auto; */
     padding: 20px;
-}
-
-.first-list {
-    text-align: left;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 1.3;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #fffefe;
-    padding: 15px 25px;
-    background-color: #061C2C;
-    width: 27.9%;
-    min-height: 150px;
-    top: 50%;
-    left: 0%;
-    bottom: 0%;  /* Added minimum height */
-    /* display: flex;
-    align-items: last baseline;
-    justify-content: center;
-    box-sizing: border-box; */
-}
-.first-list span {
-    position: relative;
-    display: inline-block;
-    text-align: left;
-    bottom: 0%;
-    left: 0%;
-}
-.A-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-}
-.first-list br {
-    display: block;
-    content: "";
-    margin: 5px 0;
 }
 
 
@@ -352,17 +265,114 @@ p {
     }
 }
 
-.first-list::before {
-    content: ">";
-    color: blue;
-    font-family: 'Arial Black', sans-serif; /* Wider, bolder font */
-    font-size: 1.5em;
-    font-weight: 900;
-    letter-spacing: 1px; /* Adds slight extra width */
-    display: inline-block;
-    margin-right: 8px;
+.list-container {
+    padding: 0 20px;
+    margin-bottom: 110px;
 }
 
-.first-list:hover::before {
-    transform: scale(1.2); /* Slightly enlarges on hover */
+.list-container .init-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Flexbox styles for A-list */
+.list-container .init-container .A-list {
+    margin: 0 -12px 48px;
+    padding: 0;
+    display: flex;
+    gap: 24px; /* replaces the need for negative margins and padding */
+    height: 200px;
+}
+
+.list-container .init-container .A-list li {
+    flex: 1; /* each li takes equal space */
+    margin: 0;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    background-color: #061C2C;
+    position: relative;
+    background-image: url(images/asset2.svg);
+    background-repeat: no-repeat;
+    background-position: top 31px left 32px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* smooth hover effect */
+}
+
+.list-container .init-container .A-list li:hover {
+    transform: scale(1.05);
+}
+
+.list-container .init-container .A-list li span {
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* Flexbox styles for B-list */
+.list-container .init-container .B-list {
+    display: flex;
+    padding: 0;
+    flex-wrap: nowrap; /* explicitly prevent wrapping */
+    gap: 24px;
+}
+
+.list-container .init-container .B-list li {
+    flex: 1; /* items will shrink equally to fit */
+    min-width: min-content; /* allow shrinking to minimum content width */
+    /* rest of your styles... */
+ /* base width with gap accounted for */
+    height: 38px;
+    line-height: 38px;
+    padding: 0 17px;
+    background-color: #244AC2;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+    background-image: url(images/asset3.svg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-container .init-container .B-list li:hover {
+    background-color: #061C2C;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .list-container .init-container .B-list li {
+        min-width: calc(33.333% - 24px); /* 3 items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .list-container .init-container .A-list {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+    
+    .list-container .init-container .A-list li {
+        height: 150px;
+        width: 100%;
+    }
+    
+    .list-container .init-container .B-list li {
+        min-width: calc(50% - 24px); /* 2 items per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .list-container .init-container .B-list li {
+        min-width: 100%; /* 1 item per row on very small screens */
+    }
 }
