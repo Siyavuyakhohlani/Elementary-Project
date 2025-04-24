@@ -102,7 +102,7 @@ nav .hamburger-menu {
 .carousel-caption {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: absolute;
-    top: 66%;
+    top: 50%;
     left: 0;
     transform: translateY(-50%);
     background: rgb(21, 21, 165);
@@ -164,7 +164,7 @@ nav .hamburger-menu {
 }
 
 .carousel-indicators .indicator {
-    background-image: url(/Elementary-Project/images/slider-dots.svg);
+    background-image: url(/images/slider-dots.svg);
     width: 22px;
     height: 22px;
     display: inline-block;
@@ -281,7 +281,7 @@ p {
     padding-left: 32px;
     background-color: #061C2C;
     position: relative;
-    background-image: url(/Elementary-Project/images/asset2.svg);
+    background-image: url(/images/asset2.svg);
     background-repeat: no-repeat;
     background-position: top 31px left 32px;
     color: #fff;
@@ -326,7 +326,7 @@ p {
     color: #fff;
     background-position: right 15px center;
     background-repeat: no-repeat;
-    background-image: url(/Elementary-Project/images/asset3.svg);
+    background-image: url(/images/asset3.svg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -366,3 +366,200 @@ p {
         min-width: 100%; /* 1 item per row on very small screens */
     }
 }
+
+/* Tablet Responsiveness (768px - 1024px) */
+@media only screen and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .header .container {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .carousel-container {
+        height: 400px;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 24px;
+    }
+    
+    .info-container {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    
+    .text-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .image-content {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .init-container {
+        flex-direction: column;
+    }
+    
+    .A-list, .B-list {
+        width: 100%;
+    }
+    
+    .A-list li span {
+        font-size: 18px;
+    }
+    
+    .B-list li {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Responsiveness (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .header .container {
+        padding: 10px 15px;
+    }
+    
+    .site-logo img {
+        width: 120px;
+    }
+    
+    .carousel-container {
+        height: 300px;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .carousel-nav button {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px;
+    }
+    
+    .indicator {
+        width: 8px;
+        height: 8px;
+        margin: 0 5px;
+    }
+    
+    .info-container {
+        padding: 20px 15px;
+    }
+    
+    .text-content p {
+        font-size: 14px;
+    }
+    
+    .image-content img {
+        max-width: 150px;
+    }
+    
+    .A-list li {
+        padding: 10px 0;
+    }
+    
+    .A-list li span {
+        font-size: 16px;
+    }
+    
+    .B-list {
+        padding-left: 20px;
+    }
+    
+    .B-list li {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
+
+/* Small Mobile Devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+    .carousel-container {
+        height: 250px;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 16px;
+    }
+    
+    .text-content p {
+        font-size: 13px;
+    }
+    
+    .A-list li span {
+        font-size: 14px;
+    }
+    
+    .B-list li {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1435px) {
+    .list-container .init-container .B-list li {
+        width: 33.333333%;
+        margin-bottom: 24px;
+    }
+    .list-container .init-container .A-list li span {
+        font-size: 26px;
+    }
+}
+@media (max-width: 925px) {
+    .list-container .init-container .A-list li span {
+        font-size: 22px;
+    }
+}
+@media (max-width: 745px) {
+    .list-container {
+        margin-bottom: 24px;
+    }
+    .list-container .init-container .A-list {
+        height: auto;
+        margin-bottom: 24px;
+    }
+    .list-container .init-container .A-list li {
+        width: 100%;
+        display: block;
+        float: none;
+        margin-bottom: 24px;
+        height: auto;
+    }
+    .list-container .init-container .A-list li {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 100px;
+    }
+    .list-container .init-container .B-list li {
+        width: 50%;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 1024px) {
+    .B-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .B-list li {
+      margin-bottom: 10px; /* Adjust spacing as needed */
+    }
+  }
+
+@media (max-width: 768px) {
+    .B-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .B-list li {
+      margin-bottom: 8px; /* Adjust spacing as needed */
+    }
+  }
